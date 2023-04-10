@@ -14,14 +14,14 @@ public class questions {
         }
         int c = 2;
         while( c*c <= n) {
-            if (n % c ==0) {
+            if (n % c == 0) {
                 return false;
             }
             c++;
         
         }
         if (c*c > n) {
-            return true;    // this case is for 2& 3
+            return true;    // this case is for 2 & 3
         }
         return false;
 
