@@ -107,27 +107,27 @@ class Binarytrees{
         preorder(node.right);
     }
     public void inorder(){
-        preorder(root);
+        inorder(root);
     }
     private void inorder(Node node) {
         if (node == null) {
             return;
         }
         
-        preorder(node.left);
+        inorder(node.left);
         System.out.print(node.value+ " ");
-        preorder(node.right);
+        inorder(node.right);
     }
     public void postorder(){
-        preorder(root);
+        postorder(root);
     }
     private void postorder(Node node) {
         if (node == null) {
             return;
         }
         
-        preorder(node.left);
-        preorder(node.right);
+        postorder(node.left);
+        postorder(node.right);
         System.out.print(node.value+ " ");
     }
     
