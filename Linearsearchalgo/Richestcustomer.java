@@ -1,4 +1,4 @@
-package Searchingalgo;
+package Linearsearchalgo;
 
 public class Richestcustomer {
     class Solution {

@@ -1,4 +1,4 @@
-package Searchingalgo;
+package Linearsearchalgo;
 
 public class findevennumberdigits {
     class Solution {

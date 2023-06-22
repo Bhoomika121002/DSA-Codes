@@ -1,4 +1,4 @@
-package Searchingalgo;
+package Linearsearchalgo;
 
 import javax.sound.sampled.SourceDataLine;
 
