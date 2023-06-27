@@ -7,7 +7,7 @@ public class cyclesort {
         int[] arr = {3,5,2,1,4};
         cycle(arr);
         System.out.println(Arrays.toString(arr));
-     }
+     } 
 
      static void cycle(int[] arr){
         int i =0;
