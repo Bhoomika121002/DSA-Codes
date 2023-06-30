@@ -104,7 +104,7 @@ public class maze {
 
     //obstacle river at 1,1
      static void  pathrestrictions( String p, boolean[][] maze, int row, int col ){
-        //endpoint 1,1
+        
         if(row == maze.length -1 && col == maze[0].length -1){
             System.out.println(p);
             return; 
