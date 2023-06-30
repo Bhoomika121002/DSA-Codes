@@ -13,11 +13,9 @@ public class dice {
             System.out.println(p);
             return;
         }
-
         for ( int i =1; i<=6 && i <= target; i++){
             dice(p+i, target -i);
         }
-    
     }
 
     //die with any face 
@@ -26,11 +24,9 @@ public class dice {
             System.out.println(p);
             return;
         }
-
         for ( int i =1; i<=face && i <= target; i++){
             diceface(p+i, target -i,face);
         }
-    
     }
     static ArrayList<String> dice2(String p, int target) {
         if(target ==0) {
@@ -43,8 +39,6 @@ public class dice {
         for ( int i =1; i<=6 && i <= target; i++){
             list.addAll(dice2(p+i, target -i));
         }
-        return list;
-    
+        return list;   
     } 
-
 }
