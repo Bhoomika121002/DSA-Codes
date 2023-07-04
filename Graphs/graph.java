@@ -90,11 +90,9 @@ public class graph {
                     vis[neighbor] = true;
                     stack.push(neighbor);
                 }
-
             }
         }
         return false;
-
     }
 
     //dfs using recursive stack 

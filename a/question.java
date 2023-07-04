@@ -2,7 +2,7 @@ package a;
 
 public class question {
     public static void main(String[] args) {
-        int[] arr = {2,3,4,5,4,2};
+        int[] arr = {2,4,3,5,4,2};
         System.out.println(value(arr));
     }
 
