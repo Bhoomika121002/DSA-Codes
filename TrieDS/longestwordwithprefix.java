@@ -1,6 +1,7 @@
 package TrieDS;
 
-public class countuniquesubstring {
+public class longestwordwithprefix {
+    
     static class Node{
         Node[] children;
         boolean eow;
@@ -52,34 +53,33 @@ public class countuniquesubstring {
         return true;
     }
 
-    public static int countnode(Node root){
+    //variable define
+    public static String ans = "";
+
+    //function   
+    public static void longestword(Node root, StringBuilder temp ){
         if(root == null){
-            return 0; 
+            return;
         }
-        int count = 0; 
-        for (int i = 0; i<26; i++){   //check value is not null
-            if(root.children[i] != null){
-                count+= countnode(root.children[i]);
+        for(int i = 0; i<26; i++){
+            if(root.children[i] != null && root.children[i].eow == true){
+                temp.append((char)(i+'a'));
+                if(temp.length() > ans.length()){
+                    ans = temp.toString(); //directly value not assignmend to string
+                }
+                longestword(root.children[i],temp);  //recursive calls
+                temp.deleteCharAt(temp.length()-1);   //last index sey delete 
             }
 
         }
-        return count +1;    //root + all the rest nodes 
     }
 
     public static void main(String[] args) {
-        String str = "ababa"; 
-
-
-        //allsuffix 
-        for(int i = 0; i<str.length(); i++){
-            String suffix = str.substring(i);
-            insert(suffix); 
+        String words[] = {"a","banana","app","appl","ap","apply","apple"};
+        for(int i =0; i<words.length; i++){
+            insert(words[i]);
         }
-        System.out.println(countnode(root));      
+        longestword(root, new StringBuilder(""));    //empty string
+        System.out.println(ans  );
     
 }}
-
- 
-
-
-
