@@ -77,10 +77,6 @@ public class DLL {
             node.prev = p;
             if(node.next != null){
             node.next.prev= node;}
-            
-
-
-
        }
 
 
