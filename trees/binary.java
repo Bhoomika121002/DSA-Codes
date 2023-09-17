@@ -10,6 +10,7 @@ public class binary {
         Node root = null;
         root = createtree();
         
+        
     }
 
     static class Node {
@@ -41,4 +42,56 @@ public class binary {
 
         return root;
     }
-}
+
+    //search
+    boolean search(Node root,int x){
+        if(root == null){
+            return false;   
+        }
+        if(root.data ==x){
+            return true;
+        }
+        if(root.data > x){
+            return search(root.left, x);
+        }
+        return search(root.right, x);
+    }
+
+    //insert recursion
+    Node insert(Node root, int key){
+        if(root==null){
+            return new Node(key);
+        }
+        if(root.data > x){
+            root.left = insert(root.left,key);
+        }else if(root.data < x){
+            root.right = insert(root.right,key);
+        }
+    }
+
+    //insert iteratively
+    Node insertiteratively(Node root,int key){
+        Node newNode = new Node(key);
+        Node curr = root;
+        Node parent = parent;
+    
+
+    while(curr!=null){
+        parent = curr;
+        if(key < curr.key){
+            curr = curr.left;
+        }else{
+            curr = curr.right;
+        }
+    }
+
+    if(parent == null){
+        parent = newNode;
+    }
+    else if(key<parent.key){
+        parent.left = newNode;
+    }else {
+        parent.right = newNode;
+    }
+    return root;
+}}
